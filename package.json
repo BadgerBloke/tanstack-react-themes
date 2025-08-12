@@ -1,6 +1,6 @@
 {
   "name": "tanstack-react-themes",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "An abstraction for themes in your TanStack Start app",
   "author": "Mukesh Singh",
   "license": "MIT",
@@ -43,6 +43,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "@tanstack/start-client-core": "^1.131.7",
     "zod": "^4.0.17"
   },
   "devDependencies": {
@@ -50,7 +51,6 @@
     "@tanstack/config": "^0.20.0",
     "@tanstack/react-router": "^1.131.7",
     "@tanstack/react-start": "^1.131.7",
-    "@tanstack/start-client-core": "^1.131.7",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -67,7 +67,6 @@
   "peerDependencies": {
     "@tanstack/react-router": ">=1.131.7",
     "@tanstack/react-start": ">=1.131.7",
-    "@tanstack/start-client-core": ">=1.131.7",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },
