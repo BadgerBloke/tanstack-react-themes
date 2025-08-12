@@ -14,7 +14,7 @@ await publish({
         },
     ],
     branchConfigs: {
-        trunk: {
+        main: {
             prerelease: false,
         },
         alpha: {
