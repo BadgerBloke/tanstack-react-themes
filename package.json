@@ -1,6 +1,6 @@
 {
   "name": "tanstack-react-themes",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "An abstraction for themes in your TanStack Start app",
   "author": "Mukesh Singh",
   "license": "MIT",
@@ -27,13 +27,13 @@
     "build": "pnpm run clean && pnpm run build:lib",
     "build:lib": "vite build",
     "build:llm": "tsc -p ./tsconfig.json",
-    "publish": "pnpm run build && pnpm run lint:package && node scripts/publish.js"
+    "pre:publish": "pnpm run build && pnpm run lint:package"
   },
   "packageManager": "pnpm@10.14.0",
   "type": "module",
   "types": "dist/esm/index.d.ts",
-  "main": "dist/cjs/src/index.cjs",
-  "module": "dist/esm/src/index.js",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
   "files": [
     "dist",
     "src"
@@ -41,6 +41,9 @@
   "sideEffects": false,
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^1.52.3",
@@ -57,8 +60,7 @@
     "react-dom": "^19.1.1",
     "rimraf": "^6.0.1",
     "vite": "^6.3.5",
-    "vitest": "^3.2.4",
-    "zod": "^4.0.17"
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "@tanstack/react-router": ">=1.131.7",
@@ -70,11 +72,21 @@
     ".": {
       "import": {
         "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/src/index.js"
+        "default": "./dist/esm/index.js"
       },
       "require": {
         "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/src/index.cjs"
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./action": {
+      "import": {
+        "types": "./dist/esm/theme/action.d.ts",
+        "default": "./dist/esm/theme/action.js"
+      },
+      "require": {
+        "types": "./dist/cjs/theme/action.d.cts",
+        "default": "./dist/cjs/theme/action.cjs"
       }
     },
     "./package.json": "./package.json"

@@ -1,10 +1,10 @@
 'use client';
 
 import { createContext, useContext, useEffect } from "react"
-import { setThemeServerFn } from "./actions"
+import { setThemeServerFn } from "./action"
 import { useRouter } from "@tanstack/react-router"
 import { SetThemeArg, ThemeProviderProps, ThemeProviderState } from "./interface";
-import { COLOR_SCHEME_QUERY } from "./constants";
+import { COLOR_SCHEME_QUERY } from "./constant";
 import { ThemeIdentifier } from "./schema";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
