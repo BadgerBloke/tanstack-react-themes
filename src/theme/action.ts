@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import { getCookie, setCookie, } from "@tanstack/react-start/server";
+import { getCookie, setCookie } from "@tanstack/react-start/server";
 import { schema, ThemedefinedByMap, ThemeIdentifier } from "./schema";
 import { storageKey } from "./constant";
 

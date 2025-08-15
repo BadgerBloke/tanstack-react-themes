@@ -1,6 +1,6 @@
 {
   "name": "tanstack-react-themes",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "An abstraction for themes in your TanStack Start app",
   "author": "Mukesh Singh",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@tanstack/start-client-core": "^1.131.7",
+    "@tanstack/start-server-core": "^1.131.7",
     "zod": "^4.0.17"
   },
   "devDependencies": {

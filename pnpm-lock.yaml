@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@tanstack/start-client-core':
+      '@tanstack/start-server-core':
         specifier: ^1.131.7
         version: 1.131.7
       zod:
