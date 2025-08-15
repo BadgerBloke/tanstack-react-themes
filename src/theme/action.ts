@@ -1,9 +1,10 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getCookie, setCookie } from "@tanstack/react-start/server";
-import { schema, ThemedefinedByMap, ThemeIdentifier } from "./schema";
+import { ThemedefinedByMap, schema } from "./schema";
 import { storageKey } from "./constant";
+import type { ThemeIdentifier } from "./schema";
 
-export const getThemeServerFn = createServerFn().handler(async () => {
+export const getThemeServerFn = createServerFn().handler(() => {
     const themeCookie = getCookie(storageKey);
 
     if (!themeCookie) return null;
@@ -22,6 +23,6 @@ export const setThemeServerFn = createServerFn({ method: "POST" })
 
         return data.identifier;
     })
-    .handler(async ({ data }) => {
+    .handler(({ data }) => {
         setCookie(storageKey, data);
     });
