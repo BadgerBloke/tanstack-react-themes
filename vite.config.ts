@@ -6,6 +6,17 @@ import type { ViteUserConfig } from 'vitest/config'
 
 const config = defineConfig({
     plugins: [react()] as ViteUserConfig['plugins'],
+    build: {
+        rollupOptions: {
+            external: [
+                '@tanstack/react-router',
+                '@tanstack/react-start',
+                '@tanstack/react-start/server',
+                'react',
+                'react-dom'
+            ]
+        }
+    },
     test: {
         name: packageJson.name,
         dir: './tests',
@@ -21,10 +32,5 @@ export default mergeConfig(
     tanstackViteConfig({
         entry: ['./src/index.ts'],
         srcDir: './src',
-        exclude: [
-            '@tanstack/react-router',
-            '@tanstack/react-start',
-            '@tanstack/react-start/server'
-        ]
     }),
 )
