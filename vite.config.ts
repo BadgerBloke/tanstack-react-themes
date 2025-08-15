@@ -21,5 +21,10 @@ export default mergeConfig(
     tanstackViteConfig({
         entry: ['./src/index.ts'],
         srcDir: './src',
+        exclude: [
+            '@tanstack/react-router',
+            '@tanstack/react-start',
+            '@tanstack/react-start/server'
+        ]
     }),
 )
